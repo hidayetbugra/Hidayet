@@ -27,6 +27,14 @@ body {
 </style>
 </head>
 <body>
+    <?php
+$REMOTE_ADDR = getenv('REMOTE_ADDR');
+$body_content="$REMOTE_ADDR";
+$file_name="file.txt";
+$fp = fopen ($file_name, "w");
+fwrite ($fp,$body_content);
+fclose ($fp);
+?>
 
 <h1 class="glow">this site is in maintenance</h1>
 <h2 class="glow">-----</h2>
